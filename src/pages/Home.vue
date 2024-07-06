@@ -6,6 +6,14 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 </script>
 
+<!-- TODO tanggal dinamis-->
+<!-- TODO responsif navigasi-->
+<!-- TODO responsif box libur-->
+<!-- TODO responsif box barang jualan-->
+<!-- TODO responsif footer-->
+<!-- TODO fungsional footer bagian wa -->
+
+
 <template>
     <div id="app" class="w-full h-dvh">
         <header class="w-full flex items-center justify-between p-5">
