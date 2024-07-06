@@ -12,8 +12,8 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
             <h1>Men Sari</h1>
             <div>
                 <ul class="flex items-center text-neutral-500 gap-4">
-                    <li class="text-xs hover:underline hover:text-neutral-800"><a href="">Barang</a></li>
-                    <li class="text-xs hover:underline hover:text-neutral-800"><a href="">Kontak</a></li>
+                    <li class="text-xs hover:underline hover:text-neutral-800"><a href="#barang">Barang</a></li>
+                    <li class="text-xs hover:underline hover:text-neutral-800"><a href="#kontak">Kontak</a></li>
                 </ul>
             </div>
         </header>
@@ -43,7 +43,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
             </div>
         </section>
         <section class="h-fit p-5 relative">
-            <h1 class="text-3xl font-bold text-neutral-600">Barang Jualan</h1>
+            <h1 id="barang" class="text-3xl font-bold text-neutral-600">Barang Jualan</h1>
             <div class="mt-4 flex flex-col gap-5">
                 <BarangJualan 
                     type="1"
@@ -70,7 +70,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
             </div>
             <div>
                 <h1 class="text-xl font-semibold mb-2">Hubungi</h1>
-                <div>
+                <div id="kontak">
                     <ul class="text-sm flex flex-col gap-2">
                         <li>
                            <FontAwesomeIcon :icon="faPhone"/>
