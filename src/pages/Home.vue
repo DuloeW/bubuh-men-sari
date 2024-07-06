@@ -4,22 +4,24 @@ import BarangJualan from '../components/BarangJualan.vue';
 import Maps from '../components/Maps.vue';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { ref } from 'vue';
+import { useNow, useDateFormat,  } from '@vueuse/core';
+
+
+const date = useDateFormat(useNow(), "DD - MM - YYYY", {locales: 'id-ID'})
+const day = useDateFormat(useNow(), "dddd", {locales: 'id-ID'})
 </script>
 
-<!-- TODO tanggal dinamis-->
-<!-- TODO responsif navigasi-->
-<!-- TODO responsif box libur-->
-<!-- TODO responsif box barang jualan-->
-<!-- TODO responsif footer-->
+<!-- TODO dinamis tanggal besok dan tulisan libur-->
 <!-- TODO fungsional footer bagian wa -->
 
 
 <template>
     <div id="app" class="w-full h-dvh">
         <header class="w-full flex items-center justify-between p-5">
-            <h1>Men Sari</h1>
+            <h1 class="font-bold">Men Sari</h1>
             <div>
-                <ul class="flex items-center text-neutral-500 gap-4">
+                <ul class="flex items-center text-neutral-500 gap-4 sm:gap-10">
                     <li class="text-xs hover:underline hover:text-neutral-800"><a href="#barang">Barang</a></li>
                     <li class="text-xs hover:underline hover:text-neutral-800"><a href="#kontak">Kontak</a></li>
                 </ul>
@@ -31,12 +33,12 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
                 <h1 class="font-semibold text-4xl">Om Swastyastu</h1>
                 <h class="font-semibold text-sm ">Selamat Datang, Silahkan Melihat-Lihat</h>
             </div>
-            <div class="w-full mt-5 h-fit px-8 py-3 pb-9 rounded-lg bg-gradient-to-br from-orange-500 to-orange-800 relative">
-                <div class="flex justify-between border-b pb-2 border-b-white/20 font-semibold text-white">
-                    <p>Besok</p>
-                    <p>25 - 07 - 2024</p>
+            <div class="w-full mt-5 flex flex-col sm:flex-row sm:justify-between h-fit px-8 py-3 pb-9 rounded-lg bg-gradient-to-br from-orange-500 to-orange-800 relative shadow-lg">
+                <div class="flex justify-between sm:flex-col sm:w-2/4 border-b pb-2 border-b-white/20 font-semibold text-white">
+                    <p>{{day}}</p>
+                    <p>{{date}}</p>
                 </div>
-                <div class="w-full flex justify-center gap-3 text-6xl font-bold">
+                <div class="w-full flex justify-center sm:justify-end gap-3 text-6xl font-bold">
                     <span id="libur"
                         class="text-white bg-clip-text">L</span>
                     <span id="libur"
@@ -52,7 +54,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
         </section>
         <section class="h-fit p-5 relative">
             <h1 id="barang" class="text-3xl font-bold text-neutral-600">Barang Jualan</h1>
-            <div class="mt-4 flex flex-col gap-5">
+            <div class="mt-4 grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-5">
                 <BarangJualan 
                     type="1"
                     title="Bubur Ayam"
@@ -71,7 +73,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
                     description="Tum ayam merupakan sajian khas Bali yang terdiri dari campuran daging cincang dan bumbu."/>
             </div>
         </section>
-        <footer class="h-fit p-3 pt-8 pb-10 flex flex-col justify-evenly gap-5 bg-neutral-800 text-neutral-300 overflow-hidden">
+        <footer class="h-fit p-3 pt-8 pb-10 grid grid-cols-1 sm:grid-cols-2 gap-5 bg-neutral-800 text-neutral-300 overflow-hidden">
             <div>
                 <h1 class="text-xl font-semibold mb-2">Men Sari</h1>
                 <p class="text-sm">Pengusaha Bubur</p>
@@ -93,6 +95,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
             </div>
             <div>
                 <h1 class="text-xl font-semibold mb-2">Lokasi</h1>
+                <p class="mb-2 text-sm">C39X+2FG, Bengkel, Kediri, Tabanan Regency, Bali 82115</p>
                 <Maps/>
             </div>
         </footer>
