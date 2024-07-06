@@ -17,7 +17,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
                 </ul>
             </div>
         </header>
-        <section class="p-5 mt-10 h-4/5 flex flex-col justify-center relative">
+        <section class="p-5 h-4/5 flex flex-col justify-center relative">
             <!-- <img src="../assets/pp.svg" class="absolute inset-0" /> -->
             <div>
                 <h1 class="font-semibold text-4xl">Om Swastyastu</h1>
