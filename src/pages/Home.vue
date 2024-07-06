@@ -8,14 +8,20 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 <template>
     <div id="app" class="w-full h-dvh">
-        <header class="w-full flex items-center p-5">
+        <header class="w-full flex items-center justify-between p-5">
             <h1>Men Sari</h1>
+            <div>
+                <ul class="flex items-center text-neutral-500 gap-4">
+                    <li class="text-xs hover:underline hover:text-neutral-800"><a href="">Barang</a></li>
+                    <li class="text-xs hover:underline hover:text-neutral-800"><a href="">Kontak</a></li>
+                </ul>
+            </div>
         </header>
         <section class="p-5 mt-10 h-4/5 relative">
             <img src="../assets/pp.svg" class="absolute inset-0" />
             <div>
-                <h1 class="text-4xl">Om Swastyastu</h1>
-                <h class="text-sm ">Selamat Datang, Silahkan Melihat-Lihat</h>
+                <h1 class="font-semibold text-4xl">Om Swastyastu</h1>
+                <h class="font-semibold text-sm ">Selamat Datang, Silahkan Melihat-Lihat</h>
             </div>
             <div class="w-full mt-5 h-fit px-8 py-3 pb-9 rounded-lg bg-gradient-to-br from-orange-500 to-orange-800 relative">
                 <div class="flex justify-between border-b pb-2 border-b-white/20 font-semibold text-white">
@@ -57,7 +63,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
                     description="Tum ayam merupakan sajian khas Bali yang terdiri dari campuran daging cincang dan bumbu."/>
             </div>
         </section>
-        <footer class="h-fit p-3 pt-8 flex flex-col justify-evenly gap-5 bg-neutral-800 text-neutral-300 overflow-hidden">
+        <footer class="h-fit p-3 pt-8 pb-10 flex flex-col justify-evenly gap-5 bg-neutral-800 text-neutral-300 overflow-hidden">
             <div>
                 <h1 class="text-xl font-semibold mb-2">Men Sari</h1>
                 <p class="text-sm">Pengusaha Bubur</p>
