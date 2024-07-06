@@ -98,4 +98,8 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
         gap: 10px;
     }
 
+    html{
+        scroll-behavior: smooth;
+    }
+
 </style>
