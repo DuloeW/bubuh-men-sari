@@ -84,11 +84,11 @@ const day = useDateFormat(useNow(), "dddd", {locales: 'id-ID'})
                     <ul class="text-sm flex flex-col gap-2">
                         <li>
                            <FontAwesomeIcon :icon="faPhone"/>
-                           <p>+62 2833 122 1213</p> 
+                           <p>+62 8579 - 2462 - 713</p> 
                         </li>
                         <li>
                             <FontAwesomeIcon :icon="faWhatsapp"/>
-                            <a href="/">Men Sari</a>
+                            <a href="https://youtu.be/dQw4w9WgXcQ?si=ajJvf4VjyeW4YBJo">Men Sari</a>
                         </li>
                     </ul>
                 </div>
