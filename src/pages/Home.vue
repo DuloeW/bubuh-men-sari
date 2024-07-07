@@ -18,7 +18,7 @@ const day = useDateFormat(useNow(), "dddd", {locales: 'id-ID'})
 
 <template>
     <div id="app" class="w-full h-dvh">
-        <header class="w-full flex items-center justify-between p-5">
+        <header class="w-full h-fit flex items-center justify-between p-5 bg-white z-50 sm:shadow-md sticky top-0">
             <h1 class="font-bold">Men Sari</h1>
             <div>
                 <ul class="flex items-center text-neutral-500 gap-4 sm:gap-10">
@@ -27,32 +27,32 @@ const day = useDateFormat(useNow(), "dddd", {locales: 'id-ID'})
                 </ul>
             </div>
         </header>
-        <section class="p-5 h-4/5 flex flex-col justify-center relative">
+        <section class="p-5 h-4/5 flex flex-col gap-10 justify-center sm:justify-evenly">
             <!-- <img src="../assets/pp.svg" class="absolute inset-0" /> -->
             <div>
-                <h1 class="font-semibold text-4xl">Om Swastyastu</h1>
-                <h class="font-semibold text-sm ">Selamat Datang, Silahkan Melihat-Lihat</h>
+                <h1 class="font-semibold text-4xl sm:text-6xl sm:font-bold">Om Swastyastu</h1>
+                <h2 class="font-semibold text-sm sm:text-2xl sm:mt-2 sm:ml-2">Selamat Datang, Silahkan Melihat-Lihat</h2>
             </div>
-            <div class="w-full mt-5 flex flex-col sm:flex-row sm:justify-between h-fit px-8 py-3 pb-9 rounded-lg bg-gradient-to-br from-orange-500 to-orange-800 relative shadow-lg">
-                <div class="flex justify-between sm:flex-col sm:w-2/4 border-b pb-2 border-b-white/20 font-semibold text-white">
-                    <p>{{day}}</p>
-                    <p>{{date}}</p>
+            <div class="w-full flex flex-col sm:flex-row sm:justify-between h-fit px-8 py-3 pb-9 rounded-lg bg-gradient-to-br from-orange-500 sm:from-transparent to-orange-800 sm:to-transparent relative shadow-lg">
+                <div class="flex justify-between sm:flex-col sm:w-2/4 border-b pb-2 border-b-white/20 font-semibold text-white sm:text-neutral-800">
+                    <p class="sm:font-bold sm:text-xl">{{day}}</p>
+                    <p class="sm:mt-2">{{date}}</p>
                 </div>
                 <div class="w-full flex justify-center sm:justify-end gap-3 text-6xl font-bold">
                     <span id="libur"
-                        class="text-white bg-clip-text">L</span>
+                        class="text-white sm:text-neutral-800 bg-clip-text">L</span>
                     <span id="libur"
-                        class="text-white bg-clip-text">I</span>
+                        class="text-white sm:text-neutral-800 bg-clip-text">I</span>
                     <span id="libur"
-                        class="text-white bg-clip-text">B</span>
+                        class="text-white sm:text-neutral-800 bg-clip-text">B</span>
                     <span id="libur"
-                        class="text-white bg-clip-text">U</span>
+                        class="text-white sm:text-neutral-800 bg-clip-text">U</span>
                     <span id="libur"
-                        class="text-white bg-clip-text">R</span>
+                        class="text-white sm:text-neutral-800 bg-clip-text">R</span>
                 </div>
             </div>
         </section>
-        <section class="h-fit p-5 relative">
+        <section class="h-fit w-full p-5">
             <h1 id="barang" class="text-3xl font-bold text-neutral-600">Barang Jualan</h1>
             <div class="mt-4 grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-5">
                 <BarangJualan 
